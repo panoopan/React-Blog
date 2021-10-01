@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import styled, { createGlobalStyle } from "styled-components";
+
+const Root = styled.div``;
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family:  "Ubuntu", sans-serif;
+    background: black;
+    color: white;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+`;
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Root>
+    <GlobalStyle />
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Root>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
