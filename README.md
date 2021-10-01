@@ -4,6 +4,7 @@ Black & Orange 是一個鼓勵使用者分享故事的部落格平台。訪客�
 * [Demo](https://panoopan.github.io/React-Blog/#/)
 ![](https://github.com/panoopan/React-Blog/blob/main/React-Blog%20Demo.gif)
 ![](https://github.com/panoopan/React-Blog/blob/main/React-Blog%20Demo5.gif)
+![](https://github.com/panoopan/React-Blog/blob/main/React-Blog%20Demo6.gif)
 
 
 ## 功能
