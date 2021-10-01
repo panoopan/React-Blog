@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# React-Blog
+Black & Orange 是一個鼓勵使用者分享故事的部落格平台。訪客可以同時瀏覽多個不同作者的文章，並透過連結檢視特定作者的所有作品，註冊用戶可以發表、編輯及刪除文章。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [Demo](https://panoopan.github.io/React-Blog/#/)
 
-## Available Scripts
+## 功能
+* 顯示所有文章列表
+* 分頁功能，排序從新到舊，以 5 筆為一頁
+* 點擊文章標題可顯示單頁文章內容
+* 點擊作者名稱可顯示該作者之所有文章
+* 註冊/登入功能，密碼預設「Lidemy」
+* 發布文章功能，登入狀態下，顯示發布文章的頁面按鈕，輸入標題及內容即可新增文章
+* 管理功能，登入狀態下，進入後台管理列表，可編輯及刪除文章
+<img width="1041" alt="截圖 2021-09-16 下午2 52 38" src="https://user-images.githubusercontent.com/52143262/133564241-6fcb3309-e912-42b6-a4c8-f50146967d67.png">
+<img width="1041" alt="截圖 2021-09-16 下午2 54 46" src="https://user-images.githubusercontent.com/52143262/133564504-1a458f02-0821-4055-bc02-0c7b7b40301a.png">
+<img width="1041" alt="截圖 2021-09-16 下午2 54 49" src="https://user-images.githubusercontent.com/52143262/133564508-04a3525e-6e88-4c9e-a1bc-5d1e73dbd9fa.png">
+<img width="1041" alt="截圖 2021-09-16 下午2 54 51" src="https://user-images.githubusercontent.com/52143262/133564513-f563c91a-fe49-417e-872a-cc8c1d7aa996.png">
+<img width="1041" alt="截圖 2021-09-16 下午2 54 53" src="https://user-images.githubusercontent.com/52143262/133564515-000a5166-ec54-4e37-9d8e-a25383093462.png">
 
-In the project directory, you can run:
+## 使用技術
+* React 搭配 React-router 建立具備會員系統的部落格
+* 串接 Lidemy API
+* 以 JSX 語法撰寫元件
+* 支援 RWD，使用 styled-components 以 Sass 進行排版
+* 使用 React hook 實作功能 
+* 組織 React app 檔案結構
+* Github Pages 部署
 
-### `npm start`
+## 專案結構
+* /src
+  * /components
+    * App.js
+    * Navbar.js
+    * Paginator.js
+    * Post.js
+    * LoginFrom.js
+    * PostForm.js 
+  * /customHooks
+    * useUsers.js
+    * useGetPosts.js
+    * useEditPost.js
+    * usePaginate.js  
+  * /images
+  * /pages 
+    * HomePage.js
+    * LoginPage.js
+    * RegisterPage.js
+    * AboutPage.js
+    * AdminPage.js
+    * AuthorPage.js
+    * PostPage.js
+    * NewPostPage.js
+    * EditPostPage.js
+  * context.js
+  * index.js
+  * utils.js
+  * WebAPI.js
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
