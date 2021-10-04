@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://panoopan.github.io/React-Blog",
+  "homepage": "https://panoopan.github.io/React-Forum",
   "eslintConfig": {
     "extends": [
       "react-app",
