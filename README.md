@@ -2,7 +2,7 @@
 Black & Orange 是一個鼓勵使用者分享故事的平台。訪客可以同時瀏覽多個不同作者的發文，並透過連結檢視特定作者的所有文章，註冊用戶可以發表、編輯及刪除文章。
 
 * [Demo](https://panoopan.github.io/React-Blog/#/)
-![](https://github.com/panoopan/React-Blog/blob/main/React-Blog%20Demo7.gif)
+![](https://github.com/panoopan/React-Forum/blob/main/Demo.gif)
 
 
 ## 功能
