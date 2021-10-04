@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/React-Blog/static/js/main.b97025eb.chunk.js",
-    "main.js.map": "/React-Blog/static/js/main.b97025eb.chunk.js.map",
-    "runtime-main.js": "/React-Blog/static/js/runtime-main.2afcced2.js",
-    "runtime-main.js.map": "/React-Blog/static/js/runtime-main.2afcced2.js.map",
-    "static/js/2.7c319f42.chunk.js": "/React-Blog/static/js/2.7c319f42.chunk.js",
-    "static/js/2.7c319f42.chunk.js.map": "/React-Blog/static/js/2.7c319f42.chunk.js.map",
-    "index.html": "/React-Blog/index.html",
-    "static/js/2.7c319f42.chunk.js.LICENSE.txt": "/React-Blog/static/js/2.7c319f42.chunk.js.LICENSE.txt",
-    "static/media/banner.50d2ec5c.jpeg": "/React-Blog/static/media/banner.50d2ec5c.jpeg",
-    "static/media/logo.02bae6b4.jpeg": "/React-Blog/static/media/logo.02bae6b4.jpeg"
+    "main.js": "/React-Forum/static/js/main.b97025eb.chunk.js",
+    "main.js.map": "/React-Forum/static/js/main.b97025eb.chunk.js.map",
+    "runtime-main.js": "/React-Forum/static/js/runtime-main.74ad891f.js",
+    "runtime-main.js.map": "/React-Forum/static/js/runtime-main.74ad891f.js.map",
+    "static/js/2.e2ee610f.chunk.js": "/React-Forum/static/js/2.e2ee610f.chunk.js",
+    "static/js/2.e2ee610f.chunk.js.map": "/React-Forum/static/js/2.e2ee610f.chunk.js.map",
+    "index.html": "/React-Forum/index.html",
+    "static/js/2.e2ee610f.chunk.js.LICENSE.txt": "/React-Forum/static/js/2.e2ee610f.chunk.js.LICENSE.txt",
+    "static/media/banner.50d2ec5c.jpeg": "/React-Forum/static/media/banner.50d2ec5c.jpeg",
+    "static/media/logo.02bae6b4.jpeg": "/React-Forum/static/media/logo.02bae6b4.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2afcced2.js",
-    "static/js/2.7c319f42.chunk.js",
+    "static/js/runtime-main.74ad891f.js",
+    "static/js/2.e2ee610f.chunk.js",
     "static/js/main.b97025eb.chunk.js"
   ]
 }
