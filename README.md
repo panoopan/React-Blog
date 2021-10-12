@@ -37,13 +37,19 @@ Black & Orange 是一個具備會員功能的討論平台。訪客可以同時�
     * Navbar.js
     * Paginator.js
     * Post.js
-    * LoginFrom.js
     * PostForm.js 
+    * LoginFrom.js
+    * Comment.js
+    * CommentForm.js
   * /customHooks
-    * useUsers.js
+    * useAddPost.js
+    * useComments.js
     * useGetPosts.js
     * useEditPost.js
     * usePaginate.js  
+    * useLogin.js
+    * useRegister.js
+    * usePaginate.js
   * /images
   * /pages 
     * HomePage.js
