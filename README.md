@@ -15,11 +15,11 @@ Black & Orange 是一個具備會員功能的討論平台。訪客可以同時�
 * 管理功能，登入狀態下，進入後台管理列表，可編輯及刪除文章
 * 留言功能，登入狀態下，可於每篇文章下方新增留言，並能刪除自己的留言
 
-<img width="1041" alt="截圖 2021-09-16 下午2 52 38" src="https://user-images.githubusercontent.com/52143262/133564241-6fcb3309-e912-42b6-a4c8-f50146967d67.png">
-<img width="1041" alt="截圖 2021-09-16 下午2 54 46" src="https://user-images.githubusercontent.com/52143262/133564504-1a458f02-0821-4055-bc02-0c7b7b40301a.png">
-<img width="1041" alt="截圖 2021-09-16 下午2 54 49" src="https://user-images.githubusercontent.com/52143262/133564508-04a3525e-6e88-4c9e-a1bc-5d1e73dbd9fa.png">
+<img width="1042" alt="截圖 2021-10-12 上午10 41 01" src="https://user-images.githubusercontent.com/52143262/136882239-d37a3225-564c-4ccb-bcd2-5ac3e4d38db2.png">
+<img width="1042" alt="截圖 2021-10-12 上午10 41 10" src="https://user-images.githubusercontent.com/52143262/136882295-559b271c-7a25-45d2-b948-721be7bf36d9.png">
+<img width="1042" alt="截圖 2021-10-12 上午10 41 14" src="https://user-images.githubusercontent.com/52143262/136882309-a9fa7daa-28f7-4cfe-9a42-89deb4f5f769.png">
 <img width="1041" alt="截圖 2021-09-16 下午2 54 51" src="https://user-images.githubusercontent.com/52143262/133564513-f563c91a-fe49-417e-872a-cc8c1d7aa996.png">
-<img width="1041" alt="截圖 2021-09-16 下午2 54 53" src="https://user-images.githubusercontent.com/52143262/133564515-000a5166-ec54-4e37-9d8e-a25383093462.png">
+<img width="1042" alt="截圖 2021-10-12 上午10 41 25" src="https://user-images.githubusercontent.com/52143262/136882314-f99681ab-e184-42a4-a3de-11796f857bb8.png">
 
 ## 使用技術
 * React 搭配 React Router 建立具備會員系統的討論平台
