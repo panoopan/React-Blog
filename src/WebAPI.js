@@ -26,7 +26,7 @@ export const getPost = (id) => {
   );
 };
 
-export const countTotalPosts = () => {
+export const getTotalPosts = () => {
   return fetch(`${BASE_URL}/posts`).then((res) => res.json());
 };
 
@@ -99,5 +99,30 @@ export const editPost = (id, title, body) => {
       title,
       body,
     }),
+  }).then((res) => res.json());
+};
+
+export const getComments = (id) => {
+  return fetch(
+    `${BASE_URL}/posts/${id}/comments?_sort=createdAt&_order=desc`
+  ).then((res) => res.json());
+};
+
+export const addComment = (id, nickname, body) => {
+  return fetch(`${BASE_URL}/posts/${id}/comments`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      nickname,
+      body,
+    }),
+  }).then((res) => res.json());
+};
+
+export const deleteComment = (id) => {
+  return fetch(`${BASE_URL}/comments/${id}/`, {
+    method: "DELETE",
   }).then((res) => res.json());
 };
