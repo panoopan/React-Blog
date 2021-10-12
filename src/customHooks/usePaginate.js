@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useContext } from "react";
-import { countTotalPosts } from "../WebAPI";
+import { getTotalPosts } from "../WebAPI";
 import { PageContext } from "../context";
 
 function usePaginate() {
@@ -7,7 +7,7 @@ function usePaginate() {
   const { page, setPage } = useContext(PageContext);
 
   useEffect(() => {
-    countTotalPosts().then((res) => {
+    getTotalPosts().then((res) => {
       const totalPost = Number(res.length);
       setTotalPage(Math.ceil(totalPost / 5));
     });

@@ -1,31 +1,29 @@
-import { useState, useContext, useEffect, useCallback } from "react";
-import { editPost, getPost } from "../WebAPI";
+import { useState, useContext, useCallback, useEffect } from "react";
+import { getComments, addComment } from "../WebAPI";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../context";
 import { useParams } from "react-router-dom";
 import { checkLogin } from "../utils";
 
-function useEditPost() {
+function useComments() {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
-  const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [comments, setcomments] = useState([]);
   const [errorMessage, setErrorMessage] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
-    if (!checkLogin(user)) {
-      history.push("/");
-    }
-
-    getPost(id).then((post) => {
-      setTitle(post.title);
-      setBody(post.body);
+    getComments(id).then((comments) => {
+      setcomments(comments);
     });
-  }, [id, history, user]);
+  }, [id, comments]);
 
   const handleSubmit = (e) => {
+    if (!checkLogin(user)) {
+      history.push("/login");
+    }
     e.preventDefault();
 
     setErrorMessage(null);
@@ -36,33 +34,30 @@ function useEditPost() {
 
     setIsLoading(true);
 
-    editPost(id, title, body).then((data) => {
-      setIsLoading(false);
-      if (data.ok === 0) {
-        return setErrorMessage(data.message);
-      }
+    const nickname = user.nickname;
 
-      history.push("/admin");
+    if (body === "") {
+      return setErrorMessage(`Invalid request, "body" is required`);
+    }
+
+    addComment(id, nickname, body).then(() => {
+      setIsLoading(false);
+      setBody("");
     });
   };
-
-  const handleTitleInput = useCallback((e) => {
-    setTitle(e.target.value);
-  }, []);
 
   const handleBodyInput = useCallback((e) => {
     setBody(e.target.value);
   }, []);
 
   return {
-    title,
+    comments,
     body,
     errorMessage,
 
     handleSubmit,
-    handleTitleInput,
     handleBodyInput,
   };
 }
 
-export default useEditPost;
+export default useComments;

@@ -1,12 +1,10 @@
 import { useState, useContext, useEffect, useCallback } from "react";
-import { editPost, getPost } from "../WebAPI";
+import { newPost } from "../WebAPI";
 import { useHistory } from "react-router-dom";
 import { AuthContext } from "../context";
-import { useParams } from "react-router-dom";
 import { checkLogin } from "../utils";
 
-function useEditPost() {
-  const { id } = useParams();
+function useAddPost() {
   const { user } = useContext(AuthContext);
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -18,12 +16,7 @@ function useEditPost() {
     if (!checkLogin(user)) {
       history.push("/");
     }
-
-    getPost(id).then((post) => {
-      setTitle(post.title);
-      setBody(post.body);
-    });
-  }, [id, history, user]);
+  }, [history, user]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,13 +29,13 @@ function useEditPost() {
 
     setIsLoading(true);
 
-    editPost(id, title, body).then((data) => {
+    newPost(title, body).then((data) => {
       setIsLoading(false);
       if (data.ok === 0) {
         return setErrorMessage(data.message);
       }
 
-      history.push("/admin");
+      history.push("/");
     });
   };
 
@@ -65,4 +58,4 @@ function useEditPost() {
   };
 }
 
-export default useEditPost;
+export default useAddPost;
