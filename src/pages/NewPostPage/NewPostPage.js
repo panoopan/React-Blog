@@ -1,4 +1,4 @@
-import useEditPost from "../../customHooks/useEditPost";
+import useAddPost from "../../customHooks/useAddPost";
 import PostForm from "../../components/PostForm";
 
 function NewPostPage() {
@@ -10,7 +10,7 @@ function NewPostPage() {
     handleSubmit,
     handleTitleInput,
     handleBodyInput,
-  } = useEditPost();
+  } = useAddPost();
 
   const state = { title, body, errorMessage };
   const handle = { handleSubmit, handleTitleInput, handleBodyInput };

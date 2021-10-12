@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import useGetPost from "../../customHooks/useGetPosts";
+import useComments from "../../customHooks/useComments";
+import CommentForm from "../../components/CommentForm";
+import Comment from "../../components/Comment";
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context";
 
 const Root = styled.div``;
 
-const PostContainer = styled.div`
+const Container = styled.div`
   width: 50%;
   margin: 100px auto;
 
@@ -19,7 +24,7 @@ const PostTop = styled.div`
 `;
 
 const PostTitle = styled.div`
-  font-size: 24px;
+  font-size: 28px;
   white-space: pre-wrap;
   word-break: break-all;
   color: #ff8100;
@@ -40,28 +45,44 @@ const PostBody = styled.div`
 
 const Button = styled.button`
   padding: 12px;
+  margin-top: 20px;
   background: #ff8100;
   color: white;
   border: solid 1px #ff8100;
   cursor: pointer;
   float: right;
+`;
 
-  &:hover {
-    background: #ff8100;
-  }
+const CommentWrapper = styled.div`
+  margin: 150px 0 80px 0;
+  border-top: 1px solid #ff8100;
+`;
 
-  & + & {
-    margin-left: 5px;
-  }
+const CommentTitle = styled.h1``;
+
+const CommentList = styled.div`
+  margin-top: 100px;
 `;
 
 function PostPage() {
   const { post } = useGetPost();
   const history = useHistory();
+  const { user } = useContext(AuthContext);
+
+  const {
+    comments,
+    body,
+    errorMessage,
+
+    handleSubmit,
+    handleBodyInput,
+  } = useComments();
+  const state = { comments, body, errorMessage };
+  const handle = { handleSubmit, handleBodyInput };
 
   return (
     <Root>
-      <PostContainer>
+      <Container>
         <PostTop>
           <PostTitle>{post.title}</PostTitle>
           <PostInfo>
@@ -76,7 +97,18 @@ function PostPage() {
         >
           Back
         </Button>
-      </PostContainer>
+        <CommentWrapper>
+          <CommentTitle>Comments</CommentTitle>
+          {!user && "Please login to comment"}
+          {user && <CommentForm state={state} handle={handle} />}
+
+          <CommentList>
+            {comments.map((comment) => (
+              <Comment key={comment.id} comment={comment}></Comment>
+            ))}
+          </CommentList>
+        </CommentWrapper>
+      </Container>
     </Root>
   );
 }

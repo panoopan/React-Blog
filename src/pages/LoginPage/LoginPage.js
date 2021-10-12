@@ -1,5 +1,5 @@
 import LoginForm from "../../components/LoginForm";
-import useUsers from "../../customHooks/useUsers";
+import useLogin from "../../customHooks/useLogin";
 
 function LoginPage() {
   const {
@@ -10,7 +10,7 @@ function LoginPage() {
     handleSubmit,
     handleUsernameInput,
     handlePasswordInput,
-  } = useUsers();
+  } = useLogin();
 
   const state = { username, password, errorMessage };
   const handle = { handleSubmit, handleUsernameInput, handlePasswordInput };

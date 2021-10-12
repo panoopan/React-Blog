@@ -1,5 +1,5 @@
 import LoginForm from "../../components/LoginForm";
-import useUsers from "../../customHooks/useUsers";
+import useRegister from "../../customHooks/useRegister";
 
 function RegisterPage() {
   const {
@@ -12,7 +12,7 @@ function RegisterPage() {
     handleNicknameInput,
     handleUsernameInput,
     handlePasswordInput,
-  } = useUsers();
+  } = useRegister();
 
   const state = { nickname, username, password, errorMessage };
   const handle = {
