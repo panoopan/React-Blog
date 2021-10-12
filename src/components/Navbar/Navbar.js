@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext, LoadingContext } from "../../context";
-import useUsers from "../../customHooks/useUsers";
+import useLogin from "../../customHooks/useLogin";
 
 const Container = styled.div`
   display: flex;
@@ -43,6 +43,10 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 576px) {
+    justify-content: center;
+  }
 `;
 
 const NavbarList = styled.div`
@@ -74,7 +78,7 @@ function Navbar() {
   const location = useLocation();
   const { user } = useContext(AuthContext);
   const { isLoading } = useContext(LoadingContext);
-  const { handleLogout } = useUsers();
+  const { handleLogout } = useLogin();
 
   return (
     <Container>
@@ -91,13 +95,8 @@ function Navbar() {
             About
           </Nav>
           {user && (
-            <Nav to={"/new-post"} $active={location.pathname === "/new-post"}>
-              New Post
-            </Nav>
-          )}
-          {user && (
             <Nav to={"/admin"} $active={location.pathname === "/admin"}>
-              Manage
+              Admin
             </Nav>
           )}
         </NavbarList>

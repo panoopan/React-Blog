@@ -8,6 +8,7 @@ const Container = styled.div`
   border-bottom: 1px solid #ff8100;
   padding: 16px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   div {
@@ -25,13 +26,13 @@ const Container = styled.div`
 const Wrapper = styled.div``;
 
 const Title = styled(Link)`
-  font-size: 22px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
 `;
 
 const Info = styled.div`
-  margin-top: 12px;
+  margin: 12px 0;
   font-size: 16px;
 `;
 

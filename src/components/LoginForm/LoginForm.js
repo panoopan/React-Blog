@@ -8,7 +8,10 @@ const Container = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 80px;
+
+  @media screen and (max-width: 576px) {
+    margin-top: 100px;
+  }
 `;
 
 const Title = styled.div`
