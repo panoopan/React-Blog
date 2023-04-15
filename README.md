@@ -1,11 +1,22 @@
 # React-Forum
+Black & Orange is a discussion platform with member functions. Visitors can browse posts by different authors at the same time, leave comments at the bottom of articles to participate in discussions, and view all articles of a specific author through links. Registered users can add and manage article status.
+
 Black & Orange 是一個具備會員功能的討論平台。訪客可以同時瀏覽多個不同作者的發文，在文章下方留言參與討論，並透過連結檢視特定作者的所有文章。註冊用戶可以新增及管理文章狀態。
 
 * [Demo](https://panoopan.github.io/React-Forum/#/)
 ![](https://github.com/panoopan/React-Forum/blob/main/Demo.gif)
 
 
-## 功能
+## Features
+* Display a list of all discussion articles
+* Implement pagination with 5 articles per page, sorted from newest to oldest
+* Click on an article title to display the content and comments on a single page
+* Click on an author's name to display all articles written by that author
+* Implement user registration/login with JWT authentication
+* Allow registered users to publish new articles by clicking the "publish" button in the backend and entering a title and content
+* Implement article management functionality in the backend for registered users to edit and delete their articles
+* Allow logged-in users to add and delete comments on each article
+
 * 顯示所有討論文章列表
 * 分頁功能，排序從新到舊，以 5 筆為一頁
 * 點擊文章標題，可顯示單頁文章內容及留言
@@ -21,7 +32,15 @@ Black & Orange 是一個具備會員功能的討論平台。訪客可以同時�
 <img width="1041" alt="截圖 2021-09-16 下午2 54 51" src="https://user-images.githubusercontent.com/52143262/133564513-f563c91a-fe49-417e-872a-cc8c1d7aa996.png">
 <img width="1042" alt="截圖 2021-10-12 上午10 41 25" src="https://user-images.githubusercontent.com/52143262/136882314-f99681ab-e184-42a4-a3de-11796f857bb8.png">
 
-## 使用技術
+## Technologies Used
+* Using React and React Router
+* Integrating with the Lidemy API
+* Writing components using JSX syntax
+* Supporting RWD, using styled-components and Sass for styling
+* Implementing features with React Hooks
+* Organizing the file structure of the React app
+* Deploying to Github Pages.
+
 * React 搭配 React Router 建立具備會員系統的討論平台
 * 串接 Lidemy API
 * 以 JSX 語法撰寫元件
@@ -30,7 +49,7 @@ Black & Orange 是一個具備會員功能的討論平台。訪客可以同時�
 * 組織 React app 檔案結構
 * Github Pages 部署
 
-## 專案結構
+## Project Structure
 * /src
   * /components
     * App.js
@@ -65,20 +84,3 @@ Black & Orange 是一個具備會員功能的討論平台。訪客可以同時�
   * index.js
   * utils.js
   * WebAPI.js
-  
-
-<!-- English version -->
-<div id="english" style="display: none;">
-  <h2>About</h2>
-  <p>This is a discussion platform with member functions. Visitors can browse posts by different authors at the same time, leave comments at the bottom of articles to participate in discussions, and view all articles of a specific author through links. Registered users can add and manage article status.</p>
-</div>
-
-<!-- Chinese version -->
-<div id="chinese" style="display: none;">
-  <h2>關於</h2>
-  <p>這是一個具有會員功能的討論平台。訪客可以同時瀏覽多個不同作者的發文，在文章下方留言參與討論，並透過連結檢視特定作者的所有文章。註冊用戶可以新增及管理文章狀態。</p>
-</div>
-
-<!-- language switcher -->
-<p>Language: <a href="#" onclick="document.getElementById('english').style.display='none';document.getElementById('chinese').style.display='block';return false;">中文</a> | <a href="#" onclick="document.getElementById('english').style.display='block';document.getElementById('chinese').style.display='none';return false;">English</a></p>
-
