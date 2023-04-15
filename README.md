@@ -65,4 +65,20 @@ Black & Orange 是一個具備會員功能的討論平台。訪客可以同時�
   * index.js
   * utils.js
   * WebAPI.js
+  
+
+<!-- English version -->
+<div id="english" style="display: none;">
+  <h2>About</h2>
+  <p>This is a discussion platform with member functions. Visitors can browse posts by different authors at the same time, leave comments at the bottom of articles to participate in discussions, and view all articles of a specific author through links. Registered users can add and manage article status.</p>
+</div>
+
+<!-- Chinese version -->
+<div id="chinese" style="display: none;">
+  <h2>關於</h2>
+  <p>這是一個具有會員功能的討論平台。訪客可以同時瀏覽多個不同作者的發文，在文章下方留言參與討論，並透過連結檢視特定作者的所有文章。註冊用戶可以新增及管理文章狀態。</p>
+</div>
+
+<!-- language switcher -->
+<p>Language: <a href="#" onclick="document.getElementById('english').style.display='none';document.getElementById('chinese').style.display='block';return false;">中文</a> | <a href="#" onclick="document.getElementById('english').style.display='block';document.getElementById('chinese').style.display='none';return false;">English</a></p>
 
